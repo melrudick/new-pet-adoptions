@@ -1,4 +1,17 @@
 # PetAdoptions
+# 1. API - loop through each breed (breed_list) -need to take of "$t"
+# 2. API - pass each breed into Pets class??
+# 3. PET - instantiate new breed when user chooses by name
+# 4. CLI - display breed_list -done
+# 5. CLI - ask user to choose breed -done
+# 6. CLI - get breed -done
+# 7. CLI - ask user for zip -done
+# 8. API - breed and zip code??
+# 9. API - get all dogs for chosen breed
+# 10. PET - create instances
+# 11. CLI - display dogs
+# 12. CLI - ask for and get chosen dog
+# 13. CLI - display description for chosen dog
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pet_adoptions`. To experiment with that code, run `bin/console` for an interactive prompt.
 
@@ -38,4 +51,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/'melma
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
