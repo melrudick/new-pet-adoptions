@@ -1,3 +1,5 @@
 #! usr/bin/env ruby
 
 require_relative "../lib/pet_adoptions"
+
+PetAdoptions::CLI.new.call
