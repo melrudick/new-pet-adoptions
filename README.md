@@ -1,5 +1,5 @@
 # PetAdoptions
-# 1. API - loop through each breed (breed_list) -need to take of "$t"
+# 1. API - loop through each breed (breed_list) -need to take of "$t" -done
 # 2. API - pass each breed into Pets class??
 # 3. PET - instantiate new breed when user chooses by name
 # 4. CLI - display breed_list -done

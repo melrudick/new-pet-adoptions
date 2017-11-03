@@ -15,8 +15,24 @@ class PetAdoptions::CLI
     PetAdoptions::API.breed_list
     breed = gets.strip.to_i
     PetAdoptions::API.pet_list(zip, breed)
-    # choice = input.to_i
-    # if choice != 0 && choice.between?(1..20)
+    choice = input.to_i
+    if choice != 0
+      dog_list = PetAdoptions::Pets.find(choice)
+      dog_specs(dog_list)
+    end
+  end
+
+  def list_dogs
+    PetAdoptions::Pets.all.each.with_index(1) do |dog, index|
+      puts "#{index}. #{dog.name} - #{dog.sex} - #{dog.age}"
+    end
+  end
+
+  def dog_specs(dog_list)
+    binding.pry
+    puts "_____#{dog_list.name}_____"
+    puts "Sex: #{dog_list.sex}"
+    puts "Age: #{dog_list.age}"
   end
 end
 
