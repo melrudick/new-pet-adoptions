@@ -19,14 +19,16 @@ class PetAdoptions::CLI
     if choice != 0
       dog_list = PetAdoptions::Pets.find(choice)
       dog_specs(dog_list)
+    else
+      puts "Please try again."
     end
   end
 
-  def list_dogs
-    PetAdoptions::Pets.all.each.with_index(1) do |dog, index|
-      puts "#{index}. #{dog.name} - #{dog.sex} - #{dog.age}"
-    end
-  end
+  # def list_dogs
+  #   PetAdoptions::Pets.all.each.with_index(1) do |index, dog|
+  #     puts "#{index}. #{dog.name} - #{dog.sex} - #{dog.age}"
+  #   end
+  # end
 
   def dog_specs(dog_list)
     binding.pry

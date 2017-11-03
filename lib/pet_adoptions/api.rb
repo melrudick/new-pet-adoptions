@@ -11,7 +11,7 @@ class PetAdoptions::API
 
   def self.pet_list(zip_code, breed_selection)
     # zip_code = "78721"
-    # breed_selection = "Alaskan%20Malamute" 
+    # breed_selection = "Alaskan%20Malamute"
     pet_list = RestClient.get("http://api.petfinder.com/pet.find?format=json&key=5155468caa12a7461aa6741c8b7a35f9&animal=dog&location=#{zip_code}&breed=#{breed_selection}")
     @pet_list = JSON.parse(pet_list)
     @pet_list["petfinder"]["pets"]["pet"].each do |dog|
