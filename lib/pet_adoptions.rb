@@ -2,6 +2,7 @@
 require 'rest-client'
 require 'json'
 require 'pry'
+require 'open-uri'
 
 require_relative "./pet_adoptions/version"
 require_relative "./pet_adoptions/pets"

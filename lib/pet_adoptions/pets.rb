@@ -7,16 +7,16 @@ class PetAdoptions::Pets
     self.new(
     pet_data["name"]["$t"],
     pet_data["sex"]["$t"],
-    pet_data["description"]["$t"],
-    pet_data["age"]["$t"]
+    pet_data["age"]["$t"],
+    pet_data["description"]["$t"]
     )
   end
 
-  def initialize(name, sex, description, age)
+  def initialize(name, sex, age, description)
     @name = name
     @sex = sex
-    @description = description
     @age = age
+    @description = description
     # binding.pry
     @@all << self
   end
