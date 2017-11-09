@@ -1,31 +1,14 @@
-# PetAdoptions
-# 1. API - loop through each breed (breed_list) -need to take of "$t" -done
-# 2. API - pass each breed into Pets class??
-# 3. PET - instantiate new breed when user chooses by name
-# 4. CLI - display breed_list -done
-# 5. CLI - ask user to choose breed -done
-# 6. CLI - get breed -done
-# 7. CLI - ask user for zip -done
-# 8. API - breed and zip code??
-# 9. API - get all dogs for chosen breed
-# 10. PET - create instances
-# 11. CLI - display dogs
-# 12. CLI - ask for and get chosen dog
-# 13. CLI - display description for chosen dog
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pet_adoptions`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+Welcome to the Pet Adoptions Gem! This gem searches dog breeds found in petfinder.com. You will be able to search among 249 breeds of dogs to see available dogs in your area. Please follow the instructions below.
 
 ## Installation
-
-Add this line to your application's Gemfile:
 
 ```ruby
 gem 'pet_adoptions'
 ```
 
-And then execute:
+Execute:
 
     $ bundle
 
@@ -35,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Once you have the gem installed, run the program by typing ruby bin/pet_adoptions.
+
+From there, you will follow the prompts to complete your search.
 
 ## Development
 
