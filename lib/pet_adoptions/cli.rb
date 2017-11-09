@@ -15,33 +15,25 @@ class PetAdoptions::CLI
     PetAdoptions::API.get_breed_list
     choice = gets.strip.to_i-1
     breed = PetAdoptions::API.breed_list[choice]["$t"]
-
     PetAdoptions::API.get_pet_list(zip, breed)
-    if choice != 0
-      dog_list = PetAdoptions::Pets.find(choice)
-      dog_specs(dog_list)
-    else
-      puts "Please try again."
+    dog_list = PetAdoptions::Pets.all
+    list_all_dogs(dog_list, breed)
+  end
+
+  def list_all_dogs(dog_list, breed)
+    dog_list.each do |dog|
+      dog_specs(dog, breed)
     end
   end
 
-  # def list_dogs
-  #   PetAdoptions::Pets.all.each.with_index(1) do |index, dog|
-  #     puts "#{index}. #{dog.name} - #{dog.sex} - #{dog.age}"
-  #   end
-  # end
-
-  def dog_specs(dog_list)
-    puts "_____#{dog_list.name}_____"
-    puts "Sex: #{dog_list.sex}"
-    puts "Age: #{dog_list.age}"
-    puts "About: #{dog_list.description}"
+  def dog_specs(dog, breed)
+    puts "_____#{dog.name}_____"
+    puts "#{breed}"
+    puts "Sex: #{dog.sex}"
+    puts "Age: #{dog.age}"
+    if dog.description != nil
+      puts "About: #{dog.description}"
+    end
+    puts ""
   end
-
-  # def extra_details(dog_list)
-  #   puts "#{dog_list.name}: Description: #{dog_list.description}"
-  # end
 end
-
-
-# pet_list # create pets from the pet_list

@@ -12,12 +12,11 @@ class PetAdoptions::Pets
     )
   end
 
-  def initialize(name, sex, age, description)
+  def initialize(name, sex, age, description=nil)
     @name = name
     @sex = sex
     @age = age
     @description = description
-    # binding.pry
     @@all << self
   end
 
@@ -26,7 +25,6 @@ class PetAdoptions::Pets
   end
 
   def self.find(dog)
-   self.all[dog-1]
+   self.all[dog]
  end
-
 end
