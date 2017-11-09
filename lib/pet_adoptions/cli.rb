@@ -18,6 +18,16 @@ class PetAdoptions::CLI
     PetAdoptions::API.get_pet_list(zip, breed)
     dog_list = PetAdoptions::Pets.all
     list_all_dogs(dog_list, breed)
+    puts ""
+    puts "Would you like to see another breed? Enter Y or N:"
+    input = gets.strip.downcase
+    if input == "y"
+      menu
+    else
+      puts ""
+      puts "Thank you for searching!"
+      puts "Goodbye!"
+    end
   end
 
   def list_all_dogs(dog_list, breed)
