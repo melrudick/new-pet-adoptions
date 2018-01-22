@@ -3,14 +3,14 @@ class PetAdoptions::Pets
 
   @@all = []
 
-  def self.new_from_json(pet_data)
-    self.new(
-    pet_data["name"]["$t"],
-    pet_data["sex"]["$t"],
-    pet_data["age"]["$t"],
-    pet_data["description"]["$t"]
-    )
-  end
+  # def self.new_from_json(pet_data)
+  #   self.new(
+  #   pet_data["name"]["$t"],
+  #   pet_data["sex"]["$t"],
+  #   pet_data["age"]["$t"],
+  #   pet_data["description"]["$t"]
+  #   )
+  # end
 
   def initialize(name, sex, age, description=nil)
     @name = name
@@ -23,8 +23,4 @@ class PetAdoptions::Pets
   def self.all
     @@all
   end
-
-  def self.find(dog)
-   self.all[dog]
- end
 end

@@ -8,12 +8,14 @@ class PetAdoptions::CLI
    end
 
    def menu
-     sleep(2)
+     sleep(3)
      input = ""
-     PetAdoptions::API.get_breed_list
+     PetAdoptions::API.get_breed_list.first(20)
      puts "Please choose the number of the breed you would like to see:"
-     choice = gets.strip.to_i-1
-     if !choice.between?(0,PetAdoptions::API.breed_list.size-1)
+     choice = gets.strip
+     if choice = "more"
+       PetAdoptions::API.get_breed_list.first(40)
+     elsif !choice.to_i-1.between?(0,PetAdoptions::API.breed_list.size-1)
        puts "Invalid choice"
        menu
      end

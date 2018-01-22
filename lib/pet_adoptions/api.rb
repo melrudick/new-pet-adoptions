@@ -21,7 +21,12 @@ class PetAdoptions::API
      @pet_list = @response["petfinder"]["pets"]["pet"]
      if @pet_list != nil
      @pet_list.collect do |dog|
-       PetAdoptions::Pets.new_from_json(dog)
+       PetAdoptions::Pets.new(
+       dog["name"]["$t"],
+       dog["sex"]["$t"],
+       dog["age"]["$t"],
+       dog["description"]["$t"]
+       )
      end
        return true
      else
